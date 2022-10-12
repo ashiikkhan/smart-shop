@@ -1,8 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const Product = () => {
-  const product = {}
-  const { name, picture, price, category } = product
+const Product = ({ product }) => {
+  const { name, picture, price, category } = product;
   return (
     <div className='bg-gray-100 p-6 rounded shadow-lg'>
       <img
@@ -15,12 +14,11 @@ const Product = () => {
       <p className='text-gray-700 font-bold'>Price: {price}$</p>
       <button
         type='button'
-        className='px-8 block w-full mt-4 py-3 font-semibold rounded-full bg-cyan-200 text-gray-800 hover:bg-cyan-400'
-      >
+        className='px-8 block w-full mt-4 py-3 font-semibold rounded-full bg-cyan-200 text-gray-800 hover:bg-cyan-400'>
         Add To Cart
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;
