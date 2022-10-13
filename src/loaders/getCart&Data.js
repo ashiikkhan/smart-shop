@@ -7,12 +7,10 @@ export const productsAndCartData = async () => {
 
   //cart
   const savedCart = getStoredCart();
-  console.log('test', savedCart); //test purpose
   const initialCart = [];
 
   for (const id in savedCart) {
     const foundProduct = products.find((product) => product.id === id);
-    console.log('found products', foundProduct); //test purpose
     if (foundProduct) {
       const quantity = savedCart[id];
       foundProduct.quantity = quantity;
@@ -22,3 +20,6 @@ export const productsAndCartData = async () => {
 
   return { products, initialCart };
 };
+
+// console.log('test', savedCart); //test purpose
+// console.log('found products', foundProduct); //test purpose

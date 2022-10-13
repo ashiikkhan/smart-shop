@@ -4,6 +4,7 @@ import Root from '../components/Root';
 import ErrorPage from '../components/ErrorPage';
 import About from '../components/About';
 import Shop from '../components/Shop';
+import Cart from '../components/Cart';
 import { productsAndCartData } from '../loaders/getCart&Data';
 
 const router = createBrowserRouter([
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home></Home> },
       { path: '/home', element: <Home></Home> },
       { path: '/shop', element: <Shop></Shop> },
+      { path: '/cart', element: <Cart></Cart> },
       { path: '/about', element: <About></About> },
     ],
   },
