@@ -2,10 +2,10 @@ import React, { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
 import { addToDb } from '../utils/fakeDB';
 import Product from './Product';
-import { ProductContext } from './Root';
+import { ProductsContext } from './Root';
 
 const Shop = () => {
-  const products = useContext(ProductContext);
+  const products = useContext(ProductsContext);
 
   const [cart, setCart] = useState([]);
 
@@ -18,7 +18,7 @@ const Shop = () => {
     if (!exist) {
       product.quantity = 1;
       newCart = [...cart, product];
-      console.log(newCart);
+      // console.log(newCart);
     } else {
       const rest = cart.filter(
         (existingProduct) => existingProduct.id !== product.id
